@@ -13,8 +13,7 @@ export default function Footer() {
             <div className="flex items-center gap-2.5 mb-4">
               <AppLogo size={40} />
               <div className="flex flex-col leading-tight">
-                <span className="font-extrabold text-lg text-primary-light uppercase leading-none">Star</span>
-                <span className="font-extrabold text-lg text-white uppercase leading-none">Computer</span>
+                <span className="font-extrabold text-lg bg-gradient-to-r from-primary-light to-accent bg-clip-text text-transparent uppercase leading-none">FastFix</span>
               </div>
             </div>
             <p className="text-sm text-white/70 leading-relaxed mb-5">
@@ -51,9 +50,9 @@ export default function Footer() {
                 { label: 'Laptops', href: '/products' },
                 { label: 'Desktops', href: '/products' },
                 { label: 'Services', href: '/services' },
-                { label: 'Doorstep Service', href: '#doorstep' },
-                { label: 'About Us', href: '#about' },
-                { label: 'Contact Us', href: '#contact' },
+                { label: 'Doorstep Service', href: '/#doorstep' },
+                { label: 'About Us', href: '/#about' },
+                { label: 'Contact Us', href: '/#contact' },
               ]?.map((l) => (
                 <li key={l?.label}>
                   <Link to={l?.href} className="text-sm text-white/70 hover:text-white transition-colors">
@@ -114,7 +113,7 @@ export default function Footer() {
       {/* Bottom bar */}
       <div className="border-t border-white/10">
         <div className="container-custom py-4 flex flex-col sm:flex-row items-center justify-between gap-2">
-          <p className="text-xs text-white/50">© 2024 Star Computer. All Rights Reserved.</p>
+          <p className="text-xs text-white/50">© 2026 FastFix. All Rights Reserved.</p>
          
         </div>
       </div>

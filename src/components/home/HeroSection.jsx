@@ -20,19 +20,24 @@ export default function HeroSection() {
 
   return (
     <section className="relative min-h-[520px] md:min-h-[620px] flex items-center overflow-hidden bg-hero-bg">
-      {/* Background Image */}
+      {/* Background Video */}
       <div className="absolute inset-0 z-0">
-        <AppImage
-          src="https://img.rocket.new/generatedImages/rocket_gen_img_1dce3f628-1772832763694.png"
-          alt="Modern computer workstation setup with multiple monitors in dim atmospheric tech office, dark steel walls, low-key industrial lighting"
-          fill
-          priority
-          className="object-cover opacity-40"
-        />
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover opacity-50"
+        >
+          <source
+            src="https://res.cloudinary.com/ds4i8pujs/video/upload/v1786184514/Technician_repairing_laptop_202608081546_processed_1_o1cpzm.mp4"
+            type="video/mp4"
+          />
+        </video>
 
         {/* Gradient scrim — dark on left for text legibility */}
-        <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/20" />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-black/30" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/65 to-black/35" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-black/35" />
         {/* Grain texture */}
         <div className="absolute inset-0 grain-overlay" />
       </div>
@@ -49,15 +54,15 @@ export default function HeroSection() {
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent opacity-75" />
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-accent" />
               </span>
-              <span className="text-xs font-semibold text-white/90 uppercase tracking-widest">🏠 Kundrathur's #1 Doorstep Computer Service</span>
+              <span className="text-xs font-semibold text-white/90 uppercase tracking-widest">Real Repairs, By Real Technicians</span>
             </div>
 
             <h1 className="text-hero-xl font-extrabold text-white mb-4 leading-tight">
-              <span className="text-primary-light">DOORSTEP</span>{' '}
-              COMPUTER SERVICE
+              <span className="text-primary-light">EXPERT REPAIRS</span>{' '}
+              AT YOUR DOORSTEP
             </h1>
-            <p className="text-lg md:text-xl font-semibold text-white/90 mb-2">Book a Repair — We Come to You</p>
-            <p className="text-base text-white/70 mb-4">Laptops · Desktops · Same-Day Doorstep Visits · New &amp; Second-Hand Sales</p>
+            <p className="text-lg md:text-xl font-semibold text-white/90 mb-2">Skilled Technicians Fix It Right — At Your Home or Office</p>
+            <p className="text-base text-white/70 mb-4">🔧 Doorstep Computer & Laptop Service</p>
 
             {/* Locations */}
             <div className="flex items-center gap-2 mb-8">
@@ -71,49 +76,25 @@ export default function HeroSection() {
             {/* CTAs */}
             <div className="flex flex-wrap gap-3">
               <a
+                href={`tel:${PHONE_NUMBER?.replace(/\s/g, '')}`}
+                className="flex items-center gap-2.5 px-6 py-3.5 rounded-xl bg-primary text-white font-bold text-base hover:bg-primary-dark transition-all shadow-lg shadow-primary/30 blue-glow">
+
+                <span className="text-lg">📞</span>
+                Call Now
+              </a>
+              <a
                 href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent('Hello! I want to book a doorstep computer service.')}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2.5 px-6 py-3.5 rounded-xl bg-accent text-white font-bold text-base hover:bg-green-700 transition-all shadow-lg shadow-green-700/30">
 
-                <span className="text-lg">📱</span>
-                Book Doorstep Service
-              </a>
-              <a
-                href={`tel:${PHONE_NUMBER?.replace(/\s/g, '')}`}
-                className="flex items-center gap-2.5 px-6 py-3.5 rounded-xl bg-primary text-white font-bold text-base hover:bg-primary-dark transition-all shadow-lg shadow-primary/30 blue-glow">
-
-                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
-                </svg>
-                Call Now
+                <span className="text-lg">💬</span>
+                WhatsApp Now
               </a>
             </div>
           </div>
 
-          {/* Image side */}
-          <div className="hidden md:flex justify-center items-center relative">
-            <div className="relative w-full max-w-md animate-float">
-              <div className="absolute -inset-4 bg-primary/20 rounded-3xl blur-2xl" />
-              <div className="relative rounded-2xl overflow-hidden border border-white/10 shadow-2xl">
-                <AppImage
-                  src="https://images.unsplash.com/photo-1723370013096-a6ca0679180a"
-                  alt="Laptop and desktop computer setup with colorful screen display against dark background"
-                  width={600}
-                  height={400}
-                  priority
-                  className="object-cover w-full h-64 md:h-72" />
-
-                {/* Scan line effect */}
-                <div className="scan-line" />
-              </div>
-              {/* Floating badge */}
-              <div className="absolute -bottom-4 -left-4 bg-white rounded-xl px-4 py-3 shadow-xl border border-border">
-                <p className="text-xs text-muted-foreground font-medium">Serving since 2010</p>
-                <p className="text-lg font-extrabold text-primary">5000+ Repairs</p>
-              </div>
-            </div>
-          </div>
+       
         </div>
       </div>
     </section>

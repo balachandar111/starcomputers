@@ -130,7 +130,7 @@ export default function ProductsPageContent() {
                       Enquire Now
                     </a>
                     <a
-                      href={`tel:+917010588866`}
+                      href={`tel:+918838810132`}
                       className="px-3 py-2.5 rounded-lg border border-border text-muted-foreground hover:border-primary hover:text-primary transition-all"
                       aria-label="Call us">
 

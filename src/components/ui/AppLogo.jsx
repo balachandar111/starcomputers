@@ -3,7 +3,7 @@ import AppIcon from './AppIcon';
 import AppImage from './AppImage';
 
 const AppLogo = memo(function AppLogo({
-  src = 'https://res.cloudinary.com/ds4i8pujs/image/upload/v1786106600/ChatGPT_Image_Aug_7__2026__04_29_56_PM-removebg-preview_amsaqf.png',
+  src = 'https://res.cloudinary.com/ds4i8pujs/image/upload/v1786184621/Gemini_Generated_Image_mch5g7mch5g7mch5-removebg-preview_t7gr0i.png',
   iconName = 'SparklesIcon',
   size = 64,
   className = '',

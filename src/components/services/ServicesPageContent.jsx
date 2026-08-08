@@ -1,27 +1,13 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
-import Icon from '@/components/ui/AppIcon';
 import { services, WHATSAPP_NUMBER, LOCATIONS } from '@/data/starComputerData';
-
-const iconMap = {
-  WrenchScrewdriverIcon: 'WrenchScrewdriverIcon',
-  ComputerDesktopIcon: 'ComputerDesktopIcon',
-  DevicePhoneMobileIcon: 'DevicePhoneMobileIcon',
-  Bars3BottomLeftIcon: 'Bars3BottomLeftIcon',
-  CircleStackIcon: 'CircleStackIcon',
-  WindowIcon: 'WindowIcon',
-  CpuChipIcon: 'CpuChipIcon',
-  CloudArrowUpIcon: 'CloudArrowUpIcon',
-  ShieldCheckIcon: 'ShieldCheckIcon',
-  WrenchIcon: 'WrenchIcon',
-};
 
 const faqs = [
   { q: 'How long does a laptop repair take?', a: 'Most repairs are completed within 1–2 working days. Screen replacements and keyboard replacements are often same-day service.' },
   { q: 'Do you offer doorstep service?', a: 'Yes! We offer doorstep computer service across Kundrathur, Pallavaram, Pammal, Chromepet, and Tambaram. Book via WhatsApp.' },
   { q: 'What warranty do you provide on repairs?', a: 'We provide a 30-day warranty on all repair work. If the same issue recurs, we fix it free of charge.' },
   { q: 'Do you use original spare parts?', a: 'We use original and high-quality compatible spare parts sourced from authorized distributors. We always inform you before using compatible parts.' },
-  { q: 'How do I book a service?', a: 'Simply WhatsApp us at +91 70105 88866, describe your issue, and we\'ll schedule a convenient time. You can also call us directly.' },
+  { q: 'How do I book a service?', a: 'Simply WhatsApp us at +91 88388 10132, describe your issue, and we\'ll schedule a convenient time. You can also call us directly.' },
   { q: 'Can you recover data from a dead laptop?', a: 'Yes, we offer professional data recovery services for crashed hard drives, SSDs, and failed storage devices. Success rate depends on the type of failure.' },
 ];
 
@@ -79,8 +65,8 @@ export default function ServicesPageContent() {
                 className={`reveal-up stagger-${Math.min(i + 1, 10)} group bg-card rounded-xl border border-border p-6 hover:border-primary hover:shadow-lg transition-all duration-300 card-hover`}
               >
                 {/* Icon */}
-                <div className="service-icon-wrap w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center text-primary mb-4">
-                  <Icon name={iconMap[service.icon]} size={28} variant="outline" />
+                <div className="service-icon-wrap w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center text-3xl mb-4">
+                  {service.emoji}
                 </div>
 
                 <h3 className="font-extrabold text-foreground mb-2 group-hover:text-primary transition-colors">{service.title}</h3>
@@ -208,7 +194,7 @@ export default function ServicesPageContent() {
                 Book via WhatsApp
               </a>
               <a
-                href="tel:+917010588866"
+                href="tel:+918838810132"
                 className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl bg-primary text-white font-bold hover:bg-primary-dark transition-all shadow-lg shadow-primary/20"
               >
                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">

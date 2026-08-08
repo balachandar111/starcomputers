@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import AppImage from '@/components/ui/AppImage';
-import { products } from '@/data/starComputerData';
+import { products, accessories, WHATSAPP_NUMBER } from '@/data/starComputerData';
 
 export default function ProductsSection() {
   const sectionRef = useRef(null);
@@ -25,12 +25,15 @@ export default function ProductsSection() {
     <section ref={sectionRef} className="section-padding bg-white" id="products">
       <div className="container-custom">
         {/* Header */}
-        <div className="text-center mb-12 reveal-up">
+        <div className="text-center mb-8 reveal-up">
           <p className="text-xs font-bold uppercase tracking-widest text-primary mb-2">What We Sell</p>
           <h2 className="text-section-heading font-extrabold text-foreground">
-            Our <span className="text-primary">Products</span>
+            New &amp; Used <span className="text-primary">Computers &amp; Laptops</span>
           </h2>
           <div className="w-12 h-1 bg-primary mx-auto mt-3 rounded-full" />
+          <p className="text-sm text-muted-foreground mt-4 max-w-lg mx-auto">
+            Desktop PCs, laptops, monitors, and accessories — plus upgrades like {accessories.slice(0, 3).join(', ')} &amp; more.
+          </p>
         </div>
 
         {/* 4-card grid */}
@@ -73,14 +76,24 @@ export default function ProductsSection() {
                   ))}
                 </ul>
 
-                <Link
-                  to="/products"
-                  className={`block text-center py-2.5 rounded-lg text-sm font-bold transition-all ${
-                    product?.badgeColor === 'primary' ? 'bg-primary text-white hover:bg-primary-dark' : 'bg-accent text-white hover:bg-green-700'
-                  }`}
-                >
-                  View {product?.title?.includes('Laptop') ? 'Laptops' : 'Desktops'} →
-                </Link>
+                <div className="flex gap-2">
+                  <Link
+                    to="/products"
+                    className={`flex-1 text-center py-2.5 rounded-lg text-sm font-bold transition-all ${
+                      product?.badgeColor === 'primary' ? 'bg-primary text-white hover:bg-primary-dark' : 'bg-accent text-white hover:bg-green-700'
+                    }`}
+                  >
+                    View {product?.title?.includes('Laptop') ? 'Laptops' : 'Desktops'}
+                  </Link>
+                  <a
+                    href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(`Hi! I'm interested in ${product?.title} (${product?.priceRange}).`)}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex-1 text-center py-2.5 rounded-lg text-sm font-bold border border-border text-foreground hover:border-primary hover:text-primary transition-all"
+                  >
+                    Enquire Now
+                  </a>
+                </div>
               </div>
             </div>
           ))}

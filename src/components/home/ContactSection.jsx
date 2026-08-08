@@ -1,7 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { WHATSAPP_NUMBER, PHONE_NUMBER, EMAIL, ADDRESS, serviceCategories } from '@/data/starComputerData';
-
-const CONTACT_WHATSAPP = '8838810132';
+import { WHATSAPP_NUMBER, PHONE_NUMBER, EMAIL, ADDRESS, BUSINESS_HOURS, GOOGLE_MAPS_LINK, LOCATIONS, serviceCategories } from '@/data/starComputerData';
 
 export default function ContactSection() {
   const [visible, setVisible] = useState(false);
@@ -21,14 +19,14 @@ export default function ContactSection() {
   const handleSubmit = (e) => {
     e.preventDefault();
     const lines = [
-      'New booking enquiry from Star Computer website',
+      'New booking enquiry from FastFix website',
       `Name: ${formData.name}`,
       `Phone: ${formData.phone}`,
       formData.email && `Email: ${formData.email}`,
       formData.service && `Service Required: ${formData.service}`,
       formData.message && `Message: ${formData.message}`,
     ].filter(Boolean).join('\n');
-    const url = `https://wa.me/${CONTACT_WHATSAPP}?text=${encodeURIComponent(lines)}`;
+    const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(lines)}`;
     window.open(url, '_blank', 'noopener,noreferrer');
     setSubmitted(true);
     setTimeout(() => setSubmitted(false), 4000);
@@ -73,7 +71,7 @@ export default function ContactSection() {
     {
       label: 'Address',
       value: ADDRESS,
-      href: 'https://www.google.com/maps/search/Kundrathur+Chennai',
+      href: GOOGLE_MAPS_LINK,
       icon: (
         <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
@@ -83,7 +81,7 @@ export default function ContactSection() {
     },
     {
       label: 'Working Hours',
-      value: 'Mon – Sat: 9:00 AM – 7:00 PM',
+      value: BUSINESS_HOURS,
       href: '#',
       icon: (
         <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -97,15 +95,24 @@ export default function ContactSection() {
     <section ref={sectionRef} className="section-padding bg-muted" id="contact">
       <div className="container-custom">
         {/* Header */}
-        <div className={`text-center mb-12 transition-all duration-700 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}>
+        <div className={`text-center mb-8 transition-all duration-700 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}>
           <p className="text-xs font-bold uppercase tracking-widest text-primary mb-2">Book a Service</p>
           <h2 className="text-section-heading font-extrabold text-foreground">
-            Contact <span className="text-primary">Star Computer</span>
+            Contact <span className="text-primary">FastFix</span>
           </h2>
           <div className="w-12 h-1 bg-primary mx-auto mt-3 rounded-full" />
           <p className="text-sm text-muted-foreground mt-4 max-w-lg mx-auto">
             Need a repair, want to buy a computer, or need doorstep service? Reach out — we respond within 1 hour.
           </p>
+        </div>
+
+        {/* Business identity strip */}
+        <div className={`max-w-xl mx-auto text-center mb-12 bg-card border border-border rounded-xl px-6 py-5 shadow-sm transition-all duration-700 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}>
+          <h3 className="font-extrabold text-lg text-foreground">FastFix</h3>
+          <p className="text-sm text-muted-foreground">Computer &amp; Laptop Sales &amp; Service</p>
+          <span className="inline-flex items-center gap-1.5 mt-2 px-3 py-1 rounded-full bg-accent/10 text-accent text-xs font-bold">
+            🏠 Doorstep Service Available
+          </span>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
@@ -130,10 +137,24 @@ export default function ContactSection() {
               ))}
             </div>
 
+            {/* Service areas */}
+            <div className="flex items-start gap-4 mb-5">
+              <div className="w-11 h-11 rounded-xl bg-primary text-white flex items-center justify-center flex-shrink-0">
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                </svg>
+              </div>
+              <div>
+                <div className="text-xs text-muted-foreground uppercase tracking-wider mb-0.5">Service Areas</div>
+                <div className="text-sm font-semibold text-foreground">{LOCATIONS.join(' · ')} &amp; Nearby Areas</div>
+              </div>
+            </div>
+
             {/* Map embed */}
-            <div className="rounded-xl overflow-hidden border border-border shadow-sm">
+            <div className="rounded-xl overflow-hidden border border-border shadow-sm mb-3">
               <iframe
-                title="Star Computer Location"
+                title="FastFix Location"
                 src="https://www.google.com/maps?q=Kundrathur,Chennai&hl=en&z=14&output=embed"
                 width="100%"
                 height="240"
@@ -142,6 +163,14 @@ export default function ContactSection() {
                 referrerPolicy="no-referrer-when-downgrade"
               />
             </div>
+            <a
+              href={GOOGLE_MAPS_LINK}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 text-sm font-semibold text-primary hover:text-primary-dark transition-colors"
+            >
+              Open in Google Maps →
+            </a>
           </div>
 
           {/* Booking Form */}

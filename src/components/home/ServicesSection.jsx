@@ -1,20 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
-import Icon from '@/components/ui/AppIcon';
 import { services, WHATSAPP_NUMBER } from '@/data/starComputerData';
-
-const iconMap = {
-  WrenchScrewdriverIcon: 'WrenchScrewdriverIcon',
-  ComputerDesktopIcon: 'ComputerDesktopIcon',
-  DevicePhoneMobileIcon: 'DevicePhoneMobileIcon',
-  Bars3BottomLeftIcon: 'Bars3BottomLeftIcon',
-  CircleStackIcon: 'CircleStackIcon',
-  WindowIcon: 'WindowIcon',
-  CpuChipIcon: 'CpuChipIcon',
-  CloudArrowUpIcon: 'CloudArrowUpIcon',
-  ShieldCheckIcon: 'ShieldCheckIcon',
-  WrenchIcon: 'WrenchIcon',
-};
 
 export default function ServicesSection() {
   const sectionRef = useRef(null);
@@ -56,8 +42,8 @@ export default function ServicesSection() {
               rel="noopener noreferrer"
               className={`reveal-up stagger-${Math.min(i + 1, 10)} group bg-card rounded-xl border border-border p-4 text-center hover:border-primary hover:shadow-md transition-all duration-300 cursor-pointer`}
             >
-              <div className="service-icon-wrap w-12 h-12 mx-auto mb-3 rounded-xl bg-primary/10 flex items-center justify-center text-primary">
-                <Icon name={iconMap[service.icon]} size={24} variant="outline" />
+              <div className="service-icon-wrap w-12 h-12 mx-auto mb-3 rounded-xl bg-primary/10 flex items-center justify-center text-2xl">
+                {service.emoji}
               </div>
               <h3 className="text-xs font-bold text-foreground group-hover:text-primary transition-colors leading-tight">{service.title}</h3>
               <p className="text-xs text-muted-foreground mt-1 font-medium">{service.price}</p>

@@ -218,6 +218,16 @@
 ::-webkit-scrollbar-thumb { background: var(--primary); border-radius: 4px; }
 ::-webkit-scrollbar-thumb:hover { background: var(--primary-dark); }
 
+/* Mobile fixed Call/WhatsApp action bar */
+@media (max-width: 767px) {
+  body {
+    padding-bottom: 58px;
+  }
+}
+.mobile-action-bar {
+  padding-bottom: env(safe-area-inset-bottom, 0);
+}
+
 /* Top announcement bar */
 .announcement-bar {
   background: linear-gradient(90deg, var(--secondary) 0%, var(--primary) 50%, var(--secondary) 100%);

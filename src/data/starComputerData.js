@@ -1,8 +1,25 @@
-export const WHATSAPP_NUMBER = '8838810132';
-export const PHONE_NUMBER = '8838810132';
+export const WHATSAPP_NUMBER = '918838810132';
+export const PHONE_NUMBER = '+91 88388 10132';
 export const EMAIL = 'starcomputerkundrathur@gmail.com';
 export const ADDRESS = 'No. 123, Main Road, Kundrathur, Chennai - 600069.';
-export const LOCATIONS = ['Kundrathur', 'Pallavaram', 'Pammal', 'Chromepet', 'Tambaram'];
+export const BUSINESS_HOURS = 'Mon – Sat: 9:00 AM – 7:00 PM';
+export const GOOGLE_MAPS_LINK = 'https://www.google.com/maps/search/Kundrathur+Chennai';
+export const GOOGLE_REVIEWS_LINK = 'https://www.google.com/maps/search/Star+Computer+Kundrathur';
+export const LOCATIONS = ['Kundrathur', 'Porur', 'Pallavaram', 'Chromepet', 'Tambaram'];
+
+// Full doorstep service coverage with approx. distance from our Kundrathur base
+export const SERVICE_AREAS = [
+  { name: 'Kundrathur', distance: '0 km' },
+  { name: 'Mangadu', distance: '~4 km' },
+  { name: 'Kovur', distance: '~4 km' },
+  { name: 'Anakaputhur', distance: '~5 km' },
+  { name: 'Thirumudivakkam', distance: '~5 km' },
+  { name: 'Pammal', distance: '~6 km' },
+  { name: 'Pallavaram', distance: '~7 km' },
+  { name: 'Chromepet', distance: '~8 km' },
+  { name: 'Porur', distance: '~8 km' },
+  { name: 'Poonamallee', distance: '~8 km' },
+];
 
 export const products = [
   {
@@ -55,26 +72,53 @@ export const products = [
   },
 ];
 
+// Accessories / upgrades sold alongside computers (shown in the sales section)
+export const accessories = ['Monitor', 'SSD', 'RAM', 'Keyboard & Mouse', 'Cabinet & SMPS', 'UPS', 'Webcam', 'Speakers'];
+
+// Full doorstep service list (used on the dedicated Doorstep Service section)
+export const doorstepServicesList = [
+  'Desktop & Laptop Service',
+  'Windows Installation',
+  'Software Installation',
+  'SSD / RAM Upgrade',
+  'Laptop & Desktop Repair',
+  'Keyboard / Screen Replacement',
+  'Virus & Performance Issues',
+  'Data Backup & Transfer',
+  'Wi-Fi / Printer Setup',
+  'New & Used Computer Sales',
+];
+
+// Services shown as icon cards (Services section + Services page)
+// Prices sourced from the FastFix "Services & Starting Prices" flyer
 export const services = [
-  { id: 'laptop-repair', title: 'Laptop Repair', icon: 'WrenchScrewdriverIcon', description: 'All brands, all issues — motherboard, charging port, hinges, keyboard, trackpad.', time: '1–2 days', price: 'From ₹299' },
-  { id: 'desktop-repair', title: 'Desktop Repair', icon: 'ComputerDesktopIcon', description: 'Hardware faults, power issues, no-display problems, cabinet repairs.', time: '1 day', price: 'From ₹299' },
-  { id: 'screen-replacement', title: 'Screen Replacement', icon: 'DevicePhoneMobileIcon', description: 'Original & compatible screens for all laptop brands. Same-day service available.', time: 'Same day', price: 'From ₹1,500' },
-  { id: 'keyboard-replacement', title: 'Keyboard Replacement', icon: 'Bars3BottomLeftIcon', description: 'Laptop keyboard replacement for all models. Original keys sourced.', time: 'Same day', price: 'From ₹499' },
-  { id: 'ssd-ram-upgrade', title: 'SSD / RAM Upgrade', icon: 'CircleStackIcon', description: 'Speed up your system — SSD, HDD, and RAM upgrades with data transfer.', time: '2–3 hours', price: 'From ₹799' },
-  { id: 'windows-installation', title: 'Windows Installation', icon: 'WindowIcon', description: 'Fresh Windows 10/11 installation with all drivers and essential software.', time: '1–2 hours', price: '₹499' },
-  { id: 'software-installation', title: 'Software Installation', icon: 'CpuChipIcon', description: 'MS Office, Tally, AutoCAD, Adobe Suite — licensed and genuine software.', time: '1 hour', price: 'From ₹199' },
-  { id: 'data-backup', title: 'Data Backup & Recovery', icon: 'CloudArrowUpIcon', description: 'Recover lost data from crashed drives. Safe backup to external storage.', time: '2–4 hours', price: 'From ₹499' },
-  { id: 'virus-removal', title: 'Virus Removal', icon: 'ShieldCheckIcon', description: 'Deep scan, malware removal, and security hardening for your system.', time: '1–2 hours', price: '₹399' },
-  { id: 'general-maintenance', title: 'General Maintenance', icon: 'WrenchIcon', description: 'Deep cleaning, thermal paste replacement, fan service — extends laptop life.', time: '2–3 hours', price: '₹499' },
+  { id: 'general-service', title: 'General Service (Cleaning)', icon: 'SparklesIcon', emoji: '🧹', description: 'Complete internal & external cleaning, thermal paste replacement, and dust removal for smoother performance.', time: 'Same day', price: '₹499' },
+  { id: 'windows-installation', title: 'OS Installation (Windows)', icon: 'WindowIcon', emoji: '🪟', description: 'Fresh Windows 10/11 installation with all drivers and essential software configured.', time: '1–2 hours', price: '₹749' },
+  { id: 'software-installation', title: 'Software Installation', icon: 'ComputerDesktopIcon', emoji: '📀', description: 'Installation of MS Office, antivirus, drivers, and any software you need — done safely and quickly.', time: '1 hour', price: '₹649' },
+  { id: 'virus-removal', title: 'Virus Removal', icon: 'ShieldCheckIcon', emoji: '🛡️', description: 'Complete malware, virus & adware removal along with system performance optimization.', time: '1–2 hours', price: '₹399' },
+  { id: 'ssd-hdd-upgrade', title: 'Hard Disk / SSD Upgrade', icon: 'CircleStackIcon', emoji: '💾', description: 'Upgrade to a faster SSD or higher-capacity HDD with complete data transfer included.', time: '2–3 hours', price: '₹1,049' },
+  { id: 'ram-upgrade', title: 'RAM Upgrade', icon: 'CpuChipIcon', emoji: '⚡', description: 'Boost your system speed and multitasking with a RAM upgrade for your laptop or desktop.', time: '30–60 mins', price: '₹649' },
+  { id: 'chip-level-repair', title: 'Chip Level Repair', icon: 'CpuChipIcon', emoji: '🔬', description: 'Advanced chip-level diagnosis and repair for power, charging, and display issues.', time: '1–2 days', price: 'From ₹1,699' },
+  { id: 'motherboard-repair', title: 'Motherboard Repair', icon: 'WrenchScrewdriverIcon', emoji: '🔧', description: 'Expert motherboard diagnosis and repair for no-power, no-display, and short-circuit issues.', time: '1–3 days', price: 'From ₹2,099' },
+  { id: 'data-recovery', title: 'Data Recovery', icon: 'CloudArrowUpIcon', emoji: '📁', description: 'Professional recovery of lost or deleted data from crashed hard drives, SSDs, and storage devices.', time: '1–2 days', price: 'From ₹1,199' },
+  { id: 'display-replacement', title: 'Display Replacement', icon: 'DevicePhoneMobileIcon', emoji: '🖥️', description: 'Original & compatible laptop screen replacement for all brands, with same-day service available.', time: 'Same day', price: 'From ₹1,699' },
 ];
 
 export const whyChooseUs = [
-  { title: 'Quality Products', description: 'New & used products with quality check', icon: 'ShieldCheckIcon' },
-  { title: 'Affordable Prices', description: 'Best prices in the market', icon: 'CurrencyRupeeIcon' },
-  { title: 'Expert Technicians', description: 'Experienced & certified professionals', icon: 'UserGroupIcon' },
-  { title: 'Quick Service', description: 'Fast & reliable same-day service', icon: 'BoltIcon' },
-  { title: 'Doorstep Support', description: 'We come to your location', icon: 'HomeIcon' },
+  { title: 'Doorstep Service', description: 'We come to your location', icon: 'HomeIcon' },
+  { title: 'Experienced Service', description: 'Years of hands-on computer expertise', icon: 'UserGroupIcon' },
   { title: 'Genuine Parts', description: 'Original & compatible spare parts', icon: 'CpuChipIcon' },
+  { title: 'Fast Response', description: 'Quick call-back & same-day visits', icon: 'BoltIcon' },
+  { title: 'Transparent Pricing', description: 'No hidden charges, upfront quotes', icon: 'CurrencyRupeeIcon' },
+  { title: 'Sales & Service', description: 'Everything under one roof', icon: 'ShieldCheckIcon' },
+];
+
+export const testimonials = [
+  { name: 'Ramesh Kumar', location: 'Kundrathur', rating: 5, review: 'Technician came home within an hour and fixed my laptop screen. Very professional and fair pricing.' },
+  { name: 'Priya Sundaram', location: 'Porur', rating: 5, review: 'Bought a second-hand desktop for my son — great condition and honest advice. Highly recommend FastFix.' },
+  { name: 'Arun Prakash', location: 'Pallavaram', rating: 4, review: 'Doorstep Windows installation was quick and hassle-free. Saved me a trip to the shop.' },
+  { name: 'Divya Raj', location: 'Chromepet', rating: 5, review: 'Data recovery from a crashed hard drive — they recovered everything. Excellent service!' },
+  { name: 'Karthik S', location: 'Tambaram', rating: 5, review: 'Called them for a Wi-Fi setup issue, resolved same day at my office. Transparent pricing, no surprises.' },
 ];
 
 export const serviceCategories = [
@@ -87,6 +131,8 @@ export const serviceCategories = [
   'Software Installation',
   'Data Backup & Recovery',
   'Virus Removal',
+  'Printer Service',
+  'Wi-Fi / Network Setup',
   'General Maintenance',
   'New Laptop Purchase',
   'Used Laptop Purchase',

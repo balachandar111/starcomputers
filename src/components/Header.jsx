@@ -5,12 +5,11 @@ import Icon from '@/components/ui/AppIcon';
 import { PHONE_NUMBER, WHATSAPP_NUMBER, LOCATIONS } from '@/data/starComputerData';
 
 const navLinks = [
-  { label: 'Home', href: '/' },
-  { label: 'Doorstep Service', href: '#doorstep', highlight: true },
+  { label: 'Doorstep Service', href: '/#doorstep', highlight: true },
   { label: 'Services', href: '/services' },
   { label: 'Products', href: '/products' },
-  { label: 'About Us', href: '#about' },
-  { label: 'Contact', href: '#contact' },
+  { label: 'About Us', href: '/#about' },
+  { label: 'Contact', href: '/#contact' },
 ];
 
 export default function Header() {
@@ -51,11 +50,18 @@ export default function Header() {
         <div className="container-custom">
           <div className="flex items-center justify-between h-16 md:h-18">
             {/* Logo */}
-            <Link to="/" className="flex items-center gap-2.5 flex-shrink-0">
-              <AppLogo size={40} />
+            <Link to="/" className="flex items-center gap-2.5 flex-shrink-0 group">
+              <div className="relative">
+                <div className="absolute -inset-1.5 bg-gradient-to-br from-primary/30 to-accent/30 rounded-full blur-md opacity-0 group-hover:opacity-100 transition-opacity" />
+                <AppLogo size={42} className="relative" />
+              </div>
               <div className="flex flex-col leading-tight">
-                <span className="font-extrabold text-lg text-primary tracking-tight uppercase leading-none">Star</span>
-                <span className="font-extrabold text-lg text-foreground tracking-tight uppercase leading-none">Computer</span>
+                <span className="font-extrabold text-xl bg-gradient-to-r from-primary via-primary-dark to-accent bg-clip-text text-transparent tracking-tight uppercase leading-none">
+                  FastFix
+                </span>
+                <span className="text-[10px] font-semibold text-muted-foreground uppercase tracking-[0.15em] mt-1">
+                  DoorStep Fix
+                </span>
               </div>
             </Link>
 
@@ -128,10 +134,14 @@ export default function Header() {
         >
           <div className="flex items-center justify-between p-4 border-b border-border">
             <div className="flex items-center gap-2">
-              <AppLogo size={36} />
+              <AppLogo size={38} />
               <div className="flex flex-col leading-tight">
-                <span className="font-extrabold text-base text-primary uppercase leading-none">Star</span>
-                <span className="font-extrabold text-base text-foreground uppercase leading-none">Computer</span>
+                <span className="font-extrabold text-lg bg-gradient-to-r from-primary via-primary-dark to-accent bg-clip-text text-transparent uppercase leading-none">
+                  FastFix
+                </span>
+                <span className="text-[9px] font-semibold text-muted-foreground uppercase tracking-[0.15em] mt-1">
+                  DoorStep Fix
+                </span>
               </div>
             </div>
             <button onClick={() => setMenuOpen(false)} className="p-2 rounded-lg hover:bg-muted">
