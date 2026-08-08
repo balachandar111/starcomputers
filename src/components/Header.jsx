@@ -25,11 +25,23 @@ export default function Header() {
   useEffect(() => {
     if (menuOpen) {
       document.body.style.overflow = 'hidden';
+      // Scroll to top when menu opens
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     } else {
       document.body.style.overflow = '';
     }
     return () => { document.body.style.overflow = ''; };
   }, [menuOpen]);
+
+  // Toggle menu function
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
+
+  // Close menu function
+  const closeMenu = () => {
+    setMenuOpen(false);
+  };
 
   return (
     <>
@@ -110,7 +122,7 @@ export default function Header() {
             {/* Mobile Menu Button */}
             <button
               className="lg:hidden p-2 rounded-lg text-foreground hover:bg-muted transition-colors"
-              onClick={() => setMenuOpen(!menuOpen)}
+              onClick={toggleMenu}
               aria-label="Toggle menu"
             >
               <Icon name={menuOpen ? 'XMarkIcon' : 'Bars3Icon'} size={24} />
@@ -122,7 +134,7 @@ export default function Header() {
         {menuOpen && (
           <div
             className="fixed inset-0 top-0 z-40 bg-black/60 backdrop-blur-sm lg:hidden"
-            onClick={() => setMenuOpen(false)}
+            onClick={closeMenu}
           />
         )}
 
@@ -144,7 +156,7 @@ export default function Header() {
                 </span>
               </div>
             </div>
-            <button onClick={() => setMenuOpen(false)} className="p-2 rounded-lg hover:bg-muted">
+            <button onClick={closeMenu} className="p-2 rounded-lg hover:bg-muted">
               <Icon name="XMarkIcon" size={20} />
             </button>
           </div>
@@ -153,7 +165,7 @@ export default function Header() {
               <Link
                 key={link?.label}
                 to={link?.href}
-                onClick={() => setMenuOpen(false)}
+                onClick={closeMenu}
                 className="flex items-center gap-3 px-4 py-3 rounded-lg text-sm font-semibold text-foreground hover:bg-muted hover:text-primary transition-colors"
               >
                 {link?.label}
