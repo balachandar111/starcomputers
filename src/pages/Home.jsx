@@ -4,6 +4,7 @@ import Footer from '@/components/Footer';
 import WhatsAppFloat from '@/components/WhatsAppFloat';
 import MobileActionBar from '@/components/MobileActionBar';
 import HeroSection from '@/components/home/HeroSection';
+import DoorstepPromiseBanner from '@/components/home/DoorstepPromiseBanner';
 import StatsSection from '@/components/home/StatsSection';
 import DoorstepSection from '@/components/home/DoorstepSection';
 import ServicesSection from '@/components/home/ServicesSection';
@@ -19,6 +20,7 @@ export default function HomePage() {
       <Header />
       <main>
         <HeroSection />
+        <DoorstepPromiseBanner />
         <StatsSection />
         <DoorstepSection />
         <ServicesSection />

@@ -20,6 +20,11 @@ export default {
           DEFAULT: 'var(--accent)',
           foreground: 'var(--accent-foreground)',
         },
+        gold: {
+          DEFAULT: 'var(--gold)',
+          light: 'var(--gold-light)',
+          dark: 'var(--gold-dark)',
+        },
         muted: {
           DEFAULT: 'var(--muted)',
           foreground: 'var(--muted-foreground)',
