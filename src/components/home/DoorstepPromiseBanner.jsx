@@ -44,12 +44,12 @@ export default function DoorstepPromiseBanner() {
               <rect x="24" y="30" width="12" height="14" fill="currentColor" opacity="0.5" />
             </svg>
 
-            {/* FastFix Logo - centered in the middle */}
+            {/* FastFix Logo - centered in the middle - INCREASED HEIGHT & WIDTH */}
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10">
               <img 
                 src="https://res.cloudinary.com/ds4i8pujs/image/upload/v1786184621/Gemini_Generated_Image_mch5g7mch5g7mch5-removebg-preview_t7gr0i.png" 
                 alt="FastFix Logo" 
-                className="w-16 h-16 sm:w-20 sm:h-20 object-contain drop-shadow-lg"
+                className="w-40 h-40 sm:w-44 sm:h-44 object-contain drop-shadow-lg"
               />
             </div>
 

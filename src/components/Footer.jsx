@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import AppLogo from '@/components/ui/AppLogo';
-import { PHONE_NUMBER, EMAIL, ADDRESS, WHATSAPP_NUMBER } from '@/data/starComputerData';
+import { PHONE_NUMBER, PHONE_NUMBER_2, EMAIL, ADDRESS, WHATSAPP_NUMBER } from '@/data/starComputerData';
 
 export default function Footer() {
   return (
@@ -87,6 +87,14 @@ export default function Footer() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                   </svg>
                   {PHONE_NUMBER}
+                </a>
+              </li>
+              <li>
+                <a href={`tel:${PHONE_NUMBER_2?.replace(/\s/g, '')}`} className="flex items-start gap-3 text-sm text-white/70 hover:text-white transition-colors">
+                  <svg className="w-4 h-4 mt-0.5 flex-shrink-0 text-primary-light" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                  </svg>
+                  {PHONE_NUMBER_2}
                 </a>
               </li>
               <li>

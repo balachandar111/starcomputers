@@ -3,10 +3,10 @@ import { PHONE_NUMBER, WHATSAPP_NUMBER, LOCATIONS } from '@/data/starComputerDat
 
 const services = [
   { icon: '💻', label: 'LAPTOP & DESKTOP SERVICE' },
-  { icon: '🔧', label: 'CHIP LEVEL REPAIR' },
+  { icon: '🖥️', label: 'DISPLAY REPLACEMENT' },
   { icon: '💿', label: 'OS INSTALLATION & SOFTWARE' },
   { icon: '💾', label: 'HARD DISK/SSD UPGRADE' },
-  { icon: '🛡️', label: 'VIRUS REMOVAL & DATA RECOVERY' },
+  { icon: '🛡️', label: 'ORIGINAL & GENUINE PARTS AVAILABLE' },
   { icon: '🚪', label: 'DOORSTEP SERVICE' },
 ];
 
@@ -83,9 +83,11 @@ export default function HeroSection() {
             <p className="text-lg md:text-xl font-semibold text-white/80 mb-2">
               LAPTOP & COMPUTER SERVICE
             </p>
-            <p className="text-base md:text-lg text-cyan-300/80 mb-4 flex items-center gap-2">
-              <span className="w-1.5 h-1.5 rounded-full bg-cyan-400 animate-pulse" />
-              Fast & Reliable Doorstep Service
+            <p className="text-base md:text-lg mb-4 flex items-center gap-2">
+              <span className="w-1.5 h-1.5 rounded-full bg-cyan-400 animate-pulse flex-shrink-0" />
+              <span className="inline-block bg-gradient-to-r from-cyan-400/20 to-blue-500/20 border border-cyan-400/40 text-cyan-300 font-bold px-3 py-1 rounded-lg shadow-[0_0_15px_rgba(34,211,238,0.25)]">
+                Fast &amp; Reliable Doorstep Service
+              </span>
             </p>
 
             {/* Services Grid - Glass morphism */}

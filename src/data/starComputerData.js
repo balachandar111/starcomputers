@@ -1,7 +1,8 @@
 export const WHATSAPP_NUMBER = '918838810132';
 export const PHONE_NUMBER = '+91 88388 10132';
-export const EMAIL = 'starcomputerkundrathur@gmail.com';
-export const ADDRESS = 'No. 123, Main Road, Kundrathur, Chennai - 600069.';
+export const PHONE_NUMBER_2 = '+91 80723 71102';
+export const EMAIL = 'Fastfixdoorstep@gmail.com';
+export const ADDRESS = 'No 43, Subbulakshmi Nagar, Kundrathur, Chennai - 600069.';
 export const BUSINESS_HOURS = 'Mon – Sat: 9:00 AM – 7:00 PM';
 export const GOOGLE_MAPS_LINK = 'https://www.google.com/maps/search/Kundrathur+Chennai';
 export const GOOGLE_REVIEWS_LINK = 'https://www.google.com/maps/search/Star+Computer+Kundrathur';
@@ -28,10 +29,10 @@ export const products = [
     badge: 'NEW',
     badgeColor: 'primary',
     description: 'Latest laptops from top brands — HP, Dell, Lenovo, Asus — with manufacturer warranty and free setup.',
-    priceRange: '₹28,000 – ₹85,000',
+    priceRange: '2 Years Warranty',
     image: 'https://images.unsplash.com/photo-1573496799175-606e47a7d4f6',
     alt: 'Modern silver laptop open on white desk in bright office environment',
-    features: ['1-year manufacturer warranty', 'Free Windows setup', 'Antivirus included', 'EMI available'],
+    features: [ 'Free Windows setup', 'Antivirus included'],
     slug: 'new-laptops',
   },
   {
@@ -40,10 +41,10 @@ export const products = [
     badge: 'TESTED',
     badgeColor: 'accent',
     description: 'Quality-checked refurbished laptops with 3-month warranty. All units cleaned, upgraded, and tested.',
-    priceRange: '₹8,000 – ₹25,000',
+    priceRange: 'Starts from ₹7,999 (6 Month Warranty)',
     image: 'https://images.unsplash.com/photo-1702726001096-096efcf640b8',
     alt: 'Refurbished laptop with glowing screen on dark desk in dim lighting',
-    features: ['3-month store warranty', 'Quality-check certified', 'SSD upgraded', 'Affordable pricing'],
+    features: [ 'Quality-check certified', 'SSD upgraded', 'Affordable pricing'],
     slug: 'used-laptops',
   },
   {
@@ -52,10 +53,10 @@ export const products = [
     badge: 'NEW',
     badgeColor: 'primary',
     description: 'Custom PC builds and branded desktops for home, office, and gaming. Built to your exact specs.',
-    priceRange: '₹22,000 – ₹1,20,000',
+    priceRange: 'Starts from ₹12,000 (2 Year Warranty)',
     image: 'https://img.rocket.new/generatedImages/rocket_gen_img_1f50baeee-1784565323384.png',
     alt: 'New gaming desktop computer tower with colorful LED lighting in dark room',
-    features: ['Custom PC builds', 'Branded systems', 'Gaming rigs available', '1-year warranty'],
+    features: ['Custom PC builds', 'Branded systems', 'Gaming rigs available'],
     slug: 'new-desktops',
   },
   {
@@ -64,10 +65,10 @@ export const products = [
     badge: 'TESTED',
     badgeColor: 'accent',
     description: 'Reliable refurbished desktop systems at affordable prices. Ideal for home and small office use.',
-    priceRange: '₹6,000 – ₹18,000',
+    priceRange: 'Starts from ₹6,999 (3 Month Warranty)',
     image: 'https://img.rocket.new/generatedImages/rocket_gen_img_11dcbafcf-1772789832580.png',
     alt: 'Desktop computer setup with monitor keyboard and mouse on clean office desk in bright room',
-    features: ['3-month warranty', 'Tested & cleaned', 'Ready to use', 'Best value'],
+    features: ['Tested & cleaned', 'Ready to use', 'Best value'],
     slug: 'used-desktops',
   },
 ];
@@ -85,23 +86,23 @@ export const doorstepServicesList = [
   'Keyboard / Screen Replacement',
   'Virus & Performance Issues',
   'Data Backup & Transfer',
-  'Wi-Fi / Printer Setup',
+  'CCTV Installation',
   'New & Used Computer Sales',
 ];
 
 // Services shown as icon cards (Services section + Services page)
 // Prices sourced from the FastFix "Services & Starting Prices" flyer
 export const services = [
-  { id: 'general-service', title: 'General Service (Cleaning)', icon: 'SparklesIcon', emoji: '🧹', description: 'Complete internal & external cleaning, thermal paste replacement, and dust removal for smoother performance.', time: 'Same day', price: '₹499' },
-  { id: 'windows-installation', title: 'OS Installation (Windows)', icon: 'WindowIcon', emoji: '🪟', description: 'Fresh Windows 10/11 installation with all drivers and essential software configured.', time: '1–2 hours', price: '₹749' },
-  { id: 'software-installation', title: 'Software Installation', icon: 'ComputerDesktopIcon', emoji: '📀', description: 'Installation of MS Office, antivirus, drivers, and any software you need — done safely and quickly.', time: '1 hour', price: '₹649' },
-  { id: 'virus-removal', title: 'Virus Removal', icon: 'ShieldCheckIcon', emoji: '🛡️', description: 'Complete malware, virus & adware removal along with system performance optimization.', time: '1–2 hours', price: '₹399' },
-  { id: 'ssd-hdd-upgrade', title: 'Hard Disk / SSD Upgrade', icon: 'CircleStackIcon', emoji: '💾', description: 'Upgrade to a faster SSD or higher-capacity HDD with complete data transfer included.', time: '2–3 hours', price: '₹1,049' },
-  { id: 'ram-upgrade', title: 'RAM Upgrade', icon: 'CpuChipIcon', emoji: '⚡', description: 'Boost your system speed and multitasking with a RAM upgrade for your laptop or desktop.', time: '30–60 mins', price: '₹649' },
-  { id: 'chip-level-repair', title: 'Chip Level Repair', icon: 'CpuChipIcon', emoji: '🔬', description: 'Advanced chip-level diagnosis and repair for power, charging, and display issues.', time: '1–2 days', price: 'From ₹1,699' },
-  { id: 'motherboard-repair', title: 'Motherboard Repair', icon: 'WrenchScrewdriverIcon', emoji: '🔧', description: 'Expert motherboard diagnosis and repair for no-power, no-display, and short-circuit issues.', time: '1–3 days', price: 'From ₹2,099' },
-  { id: 'data-recovery', title: 'Data Recovery', icon: 'CloudArrowUpIcon', emoji: '📁', description: 'Professional recovery of lost or deleted data from crashed hard drives, SSDs, and storage devices.', time: '1–2 days', price: 'From ₹1,199' },
-  { id: 'display-replacement', title: 'Display Replacement', icon: 'DevicePhoneMobileIcon', emoji: '🖥️', description: 'Original & compatible laptop screen replacement for all brands, with same-day service available.', time: 'Same day', price: 'From ₹1,699' },
+  { id: 'general-service', title: 'General Service (Cleaning)', icon: 'SparklesIcon', emoji: '🧹', description: 'Complete internal & external cleaning, thermal paste replacement, and dust removal for smoother performance.', time: 'Same day', originalPrice: '₹599', price: '₹499' },
+  { id: 'windows-installation', title: 'OS Installation (Windows)', icon: 'WindowIcon', emoji: '🪟', description: 'Fresh Windows 10/11 installation with all drivers and essential software configured.', time: '1–2 hours', originalPrice: '₹899', price: '₹749' },
+  { id: 'software-installation', title: 'Software Installation', icon: 'ComputerDesktopIcon', emoji: '📀', description: 'Installation of MS Office, antivirus, drivers, and any software you need — done safely and quickly.', time: '1 hour', originalPrice: '₹799', price: '₹649' },
+  { id: 'virus-removal', title: 'Virus Removal', icon: 'ShieldCheckIcon', emoji: '🛡️', description: 'Complete malware, virus & adware removal along with system performance optimization.', time: '1–2 hours', originalPrice: '₹499', price: '₹399' },
+  { id: 'ssd-hdd-upgrade', title: 'Hard Disk / SSD Upgrade', icon: 'CircleStackIcon', emoji: '💾', description: 'Upgrade to a faster SSD or higher-capacity HDD with complete data transfer included.', time: '2–3 hours', originalPrice: '₹1,299', price: '₹1,049' },
+  { id: 'ram-upgrade', title: 'RAM Upgrade', icon: 'CpuChipIcon', emoji: '⚡', description: 'Boost your system speed and multitasking with a RAM upgrade for your laptop or desktop.', time: '30–60 mins', originalPrice: '₹799', price: '₹649' },
+  { id: 'chip-level-repair', title: 'Chip Level Repair', icon: 'CpuChipIcon', emoji: '🔬', description: 'Advanced chip-level diagnosis and repair for power, charging, and display issues.', time: '1–2 days', originalPrice: '₹1,999', price: 'From ₹1,699' },
+  { id: 'motherboard-repair', title: 'Motherboard Repair', icon: 'WrenchScrewdriverIcon', emoji: '🔧', description: 'Expert motherboard diagnosis and repair for no-power, no-display, and short-circuit issues.', time: '1–3 days', originalPrice: '₹2,499', price: 'From ₹1499' },
+  { id: 'data-recovery', title: 'Data Recovery', icon: 'CloudArrowUpIcon', emoji: '📁', description: 'Professional recovery of lost or deleted data from crashed hard drives, SSDs, and storage devices.', time: '1–2 days', originalPrice: '₹1,499', price: 'From ₹1,199' },
+  { id: 'display-replacement', title: 'Display Replacement', icon: 'DevicePhoneMobileIcon', emoji: '🖥️', description: 'Original & compatible laptop screen replacement for all brands, with same-day service available.', time: 'Same day', originalPrice: '₹1,999', price: 'From ₹1,499' },
 ];
 
 export const whyChooseUs = [

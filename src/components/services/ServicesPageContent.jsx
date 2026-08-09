@@ -81,6 +81,9 @@ export default function ServicesPageContent() {
                     {service.time}
                   </div>
                   <div className="flex items-center gap-1.5 text-xs font-bold text-primary">
+                    {service.originalPrice && (
+                      <span className="text-muted-foreground/60 line-through font-medium mr-0.5">{service.originalPrice}</span>
+                    )}
                     {service.price}
                   </div>
                 </div>

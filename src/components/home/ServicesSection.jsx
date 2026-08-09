@@ -46,7 +46,12 @@ export default function ServicesSection() {
                 {service.emoji}
               </div>
               <h3 className="text-xs font-bold text-foreground group-hover:text-primary transition-colors leading-tight">{service.title}</h3>
-              <p className="text-xs text-muted-foreground mt-1 font-medium">{service.price}</p>
+              <div className="mt-1 flex items-center justify-center gap-1.5 flex-wrap">
+                {service.originalPrice && (
+                  <span className="text-[11px] text-muted-foreground/60 line-through font-medium">{service.originalPrice}</span>
+                )}
+                <span className="text-xs text-primary font-bold">{service.price}</span>
+              </div>
             </a>
           ))}
         </div>
