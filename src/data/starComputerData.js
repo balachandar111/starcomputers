@@ -32,7 +32,7 @@ export const products = [
     priceRange: '2 Years Warranty',
     image: 'https://images.unsplash.com/photo-1573496799175-606e47a7d4f6',
     alt: 'Modern silver laptop open on white desk in bright office environment',
-    features: [ 'Free Windows setup', 'Antivirus included'],
+    features: ['1-year manufacturer warranty', 'Free Windows setup', 'Antivirus included', 'EMI available'],
     slug: 'new-laptops',
   },
   {
@@ -40,11 +40,11 @@ export const products = [
     title: 'Second-Hand Laptops',
     badge: 'TESTED',
     badgeColor: 'accent',
-    description: 'Quality-checked refurbished laptops with 3-month warranty. All units cleaned, upgraded, and tested.',
+    description: 'Quality-checked refurbished laptops (5th to 12th Gen available) with 3-month warranty. All units cleaned, upgraded, and tested.',
     priceRange: 'Starts from ₹7,999 (6 Month Warranty)',
     image: 'https://images.unsplash.com/photo-1702726001096-096efcf640b8',
     alt: 'Refurbished laptop with glowing screen on dark desk in dim lighting',
-    features: [ 'Quality-check certified', 'SSD upgraded', 'Affordable pricing'],
+    features: ['5th to 12th Gen available', '3-month store warranty', 'Quality-check certified', 'SSD upgraded', 'Affordable pricing'],
     slug: 'used-laptops',
   },
   {
@@ -56,7 +56,7 @@ export const products = [
     priceRange: 'Starts from ₹12,000 (2 Year Warranty)',
     image: 'https://img.rocket.new/generatedImages/rocket_gen_img_1f50baeee-1784565323384.png',
     alt: 'New gaming desktop computer tower with colorful LED lighting in dark room',
-    features: ['Custom PC builds', 'Branded systems', 'Gaming rigs available'],
+    features: ['Custom PC builds', 'Branded systems', 'Gaming rigs available', '1-year warranty'],
     slug: 'new-desktops',
   },
   {
@@ -68,7 +68,7 @@ export const products = [
     priceRange: 'Starts from ₹6,999 (3 Month Warranty)',
     image: 'https://img.rocket.new/generatedImages/rocket_gen_img_11dcbafcf-1772789832580.png',
     alt: 'Desktop computer setup with monitor keyboard and mouse on clean office desk in bright room',
-    features: ['Tested & cleaned', 'Ready to use', 'Best value'],
+    features: ['3-month warranty', 'Tested & cleaned', 'Ready to use', 'Best value'],
     slug: 'used-desktops',
   },
 ];
@@ -86,7 +86,7 @@ export const doorstepServicesList = [
   'Keyboard / Screen Replacement',
   'Virus & Performance Issues',
   'Data Backup & Transfer',
-  'CCTV Installation',
+  'Wi-Fi / Printer Setup',
   'New & Used Computer Sales',
 ];
 
@@ -100,7 +100,7 @@ export const services = [
   { id: 'ssd-hdd-upgrade', title: 'Hard Disk / SSD Upgrade', icon: 'CircleStackIcon', emoji: '💾', description: 'Upgrade to a faster SSD or higher-capacity HDD with complete data transfer included.', time: '2–3 hours', originalPrice: '₹1,299', price: '₹1,049' },
   { id: 'ram-upgrade', title: 'RAM Upgrade', icon: 'CpuChipIcon', emoji: '⚡', description: 'Boost your system speed and multitasking with a RAM upgrade for your laptop or desktop.', time: '30–60 mins', originalPrice: '₹799', price: '₹649' },
   { id: 'chip-level-repair', title: 'Chip Level Repair', icon: 'CpuChipIcon', emoji: '🔬', description: 'Advanced chip-level diagnosis and repair for power, charging, and display issues.', time: '1–2 days', originalPrice: '₹1,999', price: 'From ₹1,699' },
-  { id: 'motherboard-repair', title: 'Motherboard Repair', icon: 'WrenchScrewdriverIcon', emoji: '🔧', description: 'Expert motherboard diagnosis and repair for no-power, no-display, and short-circuit issues.', time: '1–3 days', originalPrice: '₹2,499', price: 'From ₹1499' },
+  { id: 'motherboard-repair', title: 'Motherboard Repair', icon: 'WrenchScrewdriverIcon', emoji: '🔧', description: 'Expert motherboard diagnosis and repair for no-power, no-display, and short-circuit issues.', time: '1–3 days', originalPrice: '₹2,499', price: 'From ₹2,099' },
   { id: 'data-recovery', title: 'Data Recovery', icon: 'CloudArrowUpIcon', emoji: '📁', description: 'Professional recovery of lost or deleted data from crashed hard drives, SSDs, and storage devices.', time: '1–2 days', originalPrice: '₹1,499', price: 'From ₹1,199' },
   { id: 'display-replacement', title: 'Display Replacement', icon: 'DevicePhoneMobileIcon', emoji: '🖥️', description: 'Original & compatible laptop screen replacement for all brands, with same-day service available.', time: 'Same day', originalPrice: '₹1,999', price: 'From ₹1,499' },
 ];
