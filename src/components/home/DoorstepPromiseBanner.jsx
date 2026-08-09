@@ -27,7 +27,7 @@ export default function DoorstepPromiseBanner() {
           </div>
 
           {/* Illustration side */}
-          <div className="relative w-32 sm:w-40 flex-shrink-0 overflow-hidden">
+          <div className="relative w-40 sm:w-52 flex-shrink-0 overflow-visible">
             {/* sky/ground */}
             <div className="absolute inset-0 bg-[#eaf7ee]" />
             <div className="absolute bottom-0 left-0 right-0 h-14 bg-accent/25 rounded-tl-[50%] rounded-tr-[50%]" />
@@ -45,11 +45,19 @@ export default function DoorstepPromiseBanner() {
             </svg>
 
             {/* FastFix Logo - centered in the middle - INCREASED HEIGHT & WIDTH */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10">
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-[65%] z-20">
               <img 
                 src="https://res.cloudinary.com/ds4i8pujs/image/upload/v1786184621/Gemini_Generated_Image_mch5g7mch5g7mch5-removebg-preview_t7gr0i.png" 
                 alt="FastFix Logo" 
-                className="w-40 h-40 sm:w-44 sm:h-44 object-contain drop-shadow-lg"
+                className="object-contain drop-shadow-lg max-w-none max-h-none"
+                style={{
+                  width: 'clamp(110px, 13vw, 150px)',
+                  height: 'clamp(110px, 13vw, 150px)',
+                  minHeight:'none',
+                  minWidth:'none',
+                  maxWidth: 'none',
+                  maxHeight: 'none',
+                }}
               />
             </div>
 
